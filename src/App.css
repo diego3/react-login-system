@@ -1,13 +1,17 @@
 .app {
   text-align: center;
 }
-
+  
 .container {
   box-shadow: black 1px 1px 15px;
   max-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 50px;
+}
+
+.container span {
+  margin-bottom: 0.5rem;
 }
 
 .react-logo {
@@ -25,9 +29,15 @@
 input {
   padding: 10px;
   min-width: 300px;
-  border-radius: 10px;
   box-sizing: border-box;
   margin-bottom: 20px;
+  outline: none;
+  transition: 0.8s;
+  border: 3px solid #325c68;
+}
+
+input:focus {
+  border: 3px solid #55c1df;
 }
 
 .button {
@@ -38,8 +48,60 @@ input {
   padding: 13px;
   border-radius: 15px;
   cursor: pointer;
+  transition: 0.8s;
 }
 
 .button:hover {
   background-color: #24262b;
+}
+
+.error-message {
+  color: rgb(215, 61, 61);
+}
+  
+.link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.name-tag {
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.typing-login {
+  width: 5ch;
+  animation: typing 2s steps(5), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.typing-cadastre-se {
+  width: 11ch;
+  animation: typing 2s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
